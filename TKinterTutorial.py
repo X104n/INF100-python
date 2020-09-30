@@ -1,3 +1,5 @@
+#This program uses the .grid comands
+
 from tkinter import *
 
 
@@ -14,6 +16,8 @@ def click():
     except:
         definition = "Bruv, it's litteraly a yes or no question"
     output.insert(END, definition)
+    window.destroy()
+    photo1 = PhotoImage(file=("Tkinter\me.png"))
 
     #The exit buttin command
 def close():
@@ -46,7 +50,7 @@ output.grid(row=3, column=0, columnspan=2, sticky=W)
 
 #Text box output
 myTextOutput = {
-    'yes': '*Smacks the nigga*', 'no': '*Nigga smacks you*'
+    'yes': '*You smack the nigga*', 'no': '*Nigga smacks you*'
 }
 
 #Exit label
