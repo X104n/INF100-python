@@ -2,12 +2,48 @@ from tkinter import *
 
 HEIGHT = 800
 WIDTH = 800
-
+N = 0
 #Commands
 def bye():
     root.destroy()
     exit()
 
+#Gutta gjer matten
+def math(N):
+    outputText = "Dine primtall er: "
+    x = 2
+    while x <= N:
+    
+        if N % x == 0:
+            outputText = (outputText + "\n" + str(x))
+            N = N/x
+            x = 2
+        else:
+            x += 1
+    return outputText
+
+#Finne ut om du e domdom
+def primtall():
+    enteredText = textentry.get()
+    output.delete(0.0, END)
+    if enteredText.isdigit():
+        N = enteredText
+        N = int(N)
+        tall(N)
+    else:
+        outputText = "Skriv in et tall domdom. (PS: Det må vær positivt)"
+    
+    output.insert(END, outputText)
+
+#Sjekke kas tall du har skreve inn
+def tall(N):  
+    if N >= 2:
+        outputText = math(N)
+    elif N == 1 or N == 0:
+        outputText = "Bruh, detta bør du konna"
+    else:
+        outputText = "Skriv inn et positivt tall madafaka!"
+    output.insert(END, outputText)
 
 
 ###
@@ -18,6 +54,7 @@ root.title("Stian's primtall :))")
 canvas = Canvas (root, height=HEIGHT, width=WIDTH)
 canvas.pack()
 
+#Bakgrunns bilde
 photo1 = PhotoImage(file="Tkinter\windows.png")
 canv1 =Label (root, image=photo1, bg="black", bd=0)
 canv1.place(relwidth=1, relheight=1)
@@ -38,7 +75,7 @@ textentry.place(relx=0.1, rely=0.20, relwidth=0.5, relheight=0.05)
 numButL = Label(inter, bg="black", bd=0)
 numButL.place(relx=0.65, rely=0.20, relwidth=0.25, relheight=0.05)
 
-numBut = Button(numButL, text="Yea, thats my number!", font="none 10 bold", bd=5)
+numBut = Button(numButL, text="Yea, thats my number!", font="none 10 bold", bd=5, command=primtall)
 numBut.pack(fill="both", expand=True)
 
 #Text over output
