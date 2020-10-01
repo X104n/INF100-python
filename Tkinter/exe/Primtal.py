@@ -55,7 +55,7 @@ canvas = Canvas (root, height=HEIGHT, width=WIDTH)
 canvas.pack()
 
 #Bakgrunns bilde
-photo1 = PhotoImage(file="Tkinter\windows.png")
+photo1 = PhotoImage(file="skole\Tkinter\exe\windows.png")
 canv1 =Label (root, image=photo1, bg="black", bd=0)
 canv1.place(relwidth=1, relheight=1)
 
