@@ -27,7 +27,7 @@ window.title("Kalkulator")
 window.configure(background="black")
 
 #Picture
-photo1 = PhotoImage(file="Tkinter\me1.png")
+photo1 = PhotoImage(file="skole\Tkinter\me1.png")
 Label (window, image=photo1, bg="black") .grid(row=0, column=0, sticky=W)
 
 #Create label
