@@ -14,7 +14,7 @@ def num(N):
 
    #Maks 1000
    if length >= 4:
-      output += other[2]
+      output += ones[other[2]
       return output
 
    #Null
