@@ -1,27 +1,6 @@
-"""
-p = 13
-q = 31
-e = 19
-M = 2
+n = 100
+ener = int(n % 10) # singles digit 
+tier = int(((n % 100) - ener) / 10) # tens digit 
+hundrer = int(((n % 1000) - (tier * 10) - ener) / 100) # hundreds digit 
 
-n = p * q
-print(n)
-C = M ** e % n
-print(C)
-print()
-pn = (p-1) * (q-1)
-print(pn)
-d = e**-1 % pn
-print(d)
-M = C**d % n
-print(M)
-print(C ** (e ** -1 % ( (p-1) * (q - 1) ) ) % n)
-"""
-
-#x = 8/3
-
-#deling = f""" 8 / 3 = {x:.4f}"""
-#print(deling)
-
-
-print( (1/7) % 289)
+print(hundrer, tier, ener) 
