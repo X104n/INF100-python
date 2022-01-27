@@ -41,14 +41,18 @@ def uttak(N=0):
         saldo = saldo - int(N)
     return saldo
 
-def renteoppgjør():
-    None
 
-
+def renteoppgjør(saldo):
+    if saldo > 1000000:
+        saldo = saldo + saldo * 0.02
+    else:
+        saldo = saldo + saldo * 0.01
+    return saldo
+    
 saldo = 500
 
-print(meny())
 while True:
+    print(meny())
     inn = input("velg handling (0 for): ")
     try:
         inn = int(inn)
@@ -81,6 +85,10 @@ while True:
         if nummer(N) == "STOP":
             continue
         uttak(N)
+        continue
+
+    if inn == 4:
+        renteoppgjør(saldo)
         continue
 
     if inn == 5:

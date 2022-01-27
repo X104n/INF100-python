@@ -73,3 +73,4 @@ while True:
                 kar = input("Karakter ('enter' for å slette) ")
                 if kar != "":
                     if kar == "A" or "B" or "C" or "D" or "E" or "F":
+                        
